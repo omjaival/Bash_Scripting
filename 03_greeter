@@ -3,11 +3,12 @@
 greet() {
        local name=$1
        echo "hello $name (from func)"
+        return 0
 }
 
 for name in "$@"; do
-    greet "$name" >> file.txt
+    greet "$name" 
 done
 
-var=$(greet omi)
-echo "var is $var"
+greet omi
+echo $?
