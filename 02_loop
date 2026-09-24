@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-for thing in foo bar baz bat; do
+for thing in "$@"; do #the $@ ensures many input values 
     echo "thing is $thing"
 done    
