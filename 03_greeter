@@ -6,7 +6,8 @@ greet() {
 }
 
 for name in "$@"; do
-    greet "$name"
+    greet "$name" >> file.txt
 done
 
-greet omi
+var=$(greet omi)
+echo "var is $var"
