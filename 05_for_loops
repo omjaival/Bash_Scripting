@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+for thing in {1..100}; do
+        echo "thing is $thing"
+done
